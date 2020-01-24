@@ -6,6 +6,8 @@ public class NobodyherePlayer
 {
     private Player bukkitPlayer;
 
+    private  String name;
+
     private int killcooltime;
 
     public NobodyherePlayer(Player onlinePlayer)
@@ -19,6 +21,11 @@ public class NobodyherePlayer
         if(onlinePlayer != null)
         {
             this.bukkitPlayer = onlinePlayer;
+            this.name = onlinePlayer.getName();
+        }
+        else
+        {
+            this.bukkitPlayer = null;
         }
     }
 }
