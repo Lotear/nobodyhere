@@ -10,13 +10,15 @@ public class NobodyherePlayer
 
     private int killcooltime;
 
+    private boolean isMurder;
+
     public NobodyherePlayer(Player onlinePlayer)
     {
         this.killcooltime = 300;
         setPlayer(onlinePlayer);
     }
 
-    private void setPlayer(Player onlinePlayer)
+    void setPlayer(Player onlinePlayer)
     {
         if(onlinePlayer != null)
         {
@@ -28,4 +30,13 @@ public class NobodyherePlayer
             this.bukkitPlayer = null;
         }
     }
+
+    public void onDeath(NobodyherePlayer killer)
+    {
+        if(killer.isMurder)
+        {
+            //killer.killcooltime = ; 시간 초기화
+        }
+    }
+
 }
